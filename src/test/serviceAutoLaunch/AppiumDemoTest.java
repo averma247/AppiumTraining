@@ -1,5 +1,6 @@
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
@@ -8,7 +9,11 @@ import io.appium.java_client.remote.MobilePlatform;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.TapOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -22,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 public class AppiumDemoTest {
 
     AndroidDriver<AndroidElement> driver;
+    WebDriverWait wait;
 
 
 
@@ -44,6 +50,7 @@ public class AppiumDemoTest {
         System.out.println("Application launched successfully -----------------------");
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,10);
 
     }
 
@@ -115,6 +122,38 @@ public class AppiumDemoTest {
 
     }
 
+    @Test
+    public void handling_Drag_And_Drop(){
+
+        AndroidElement views = driver.findElementByAccessibilityId("Views");
+        AndroidTouchAction touch = new AndroidTouchAction(driver);
+        touch.tap(TapOptions.tapOptions().withElement(ElementOption.element(views))).perform();
+
+
+        //vertical scrolling
+        //AndroidElement list = driver.findElementById("android:id/text1");
+
+        MobileElement listItem = driver.findElement(
+                MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+
+                        "new UiSelector().description(\"Drag and Drop\"));"));
+
+        listItem.click();
+        AndroidElement source=driver.findElementById("io.appium.android.apis:id/drag_dot_1");
+        LongPressOptions longPressOptions = new LongPressOptions();
+        longPressOptions.withDuration(Duration.ofSeconds(5)).withElement(ElementOption.element(source));
+        touch.longPress(longPressOptions).release().perform();
+
+        AndroidElement destination=driver.findElementById("io.appium.android.apis:id/drag_dot_hidden");
+        TouchAction action = new TouchAction(driver);
+        //drag and drop action.
+        action.longPress(ElementOption.element(source)).moveTo(ElementOption.element(destination)).release().perform();
+        System.out.println("Element has been dropped at destination location.");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(new By.ById("io.appium.android.apis:id/drag_text")));
+        String dragText=driver.findElementById("io.appium.android.apis:id/drag_text").getText();
+        Assert.assertTrue(dragText.contains("drag_dot_1"),"Assert Failed as the actual condition is False");
+
+
+    }
 
 
     @AfterTest
