@@ -1,0 +1,81 @@
+2022-12-19 13:14:24:778 [Appium] Welcome to Appium v1.22.3
+2022-12-19 13:14:24:779 [Appium] Non-default server args:
+2022-12-19 13:14:24:780 [Appium]   address: 127.0.0.1
+2022-12-19 13:14:24:780 [Appium]   port: 4728
+2022-12-19 13:14:24:780 [Appium]   logFile: D:\InteliJDirectory\AppiumTraining\AppiumLog.txt
+2022-12-19 13:14:24:800 [Appium] Appium REST http interface listener started on 127.0.0.1:4728
+2022-12-19 13:14:24:978 [HTTP] --> GET /wd/hub/status
+2022-12-19 13:14:24:978 [HTTP] {}
+2022-12-19 13:14:24:979 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2022-12-19 13:14:24:981 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
+2022-12-19 13:14:24:989 [HTTP] <-- GET /wd/hub/status 200 8 ms - 68
+2022-12-19 13:14:24:990 [HTTP] 
+2022-12-19 13:14:35:572 [HTTP] --> POST /wd/hub/session
+2022-12-19 13:14:35:572 [HTTP] {"desiredCapabilities":{"appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","noReset":"true","platformVersion":"10","autoGrantPermissions":"true","platformName":"Android","deviceName":"Pixel XL"},"capabilities":{"firstMatch":[{"appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:autoGrantPermissions":"true","appium:deviceName":"Pixel XL","appium:noReset":"true","platformName":"android","appium:platformVersion":"10"}]}}
+2022-12-19 13:14:35:573 [W3C] Calling AppiumDriver.createSession() with args: [{"appActivity":"io.appium.android.apis.ApiDemos","appPackage":"io.appium.android.apis","noReset":"true","platformVersion":"10","autoGrantPermissions":"true","platformName":"Android","deviceName":"Pixel XL"},null,{"firstMatch":[{"appium:appActivity":"io.appium.android.apis.ApiDemos","appium:appPackage":"io.appium.android.apis","appium:autoGrantPermissions":"true","appium:deviceName":"Pixel XL","appium:noReset":"true","platformName":"android","appium:platformVersion":"10"}]}]
+2022-12-19 13:14:35:580 [BaseDriver] Event 'newSessionRequested' logged at 1671455675573 (18:44:35 GMT+0530 (India Standard Time))
+2022-12-19 13:14:35:584 [Appium] 
+2022-12-19 13:14:35:584 [Appium] ======================================================================
+2022-12-19 13:14:35:584 [Appium]   DEPRECATION WARNING:
+2022-12-19 13:14:35:584 [Appium] 
+2022-12-19 13:14:35:584 [Appium]   The 'automationName' capability was not provided in the desired 
+2022-12-19 13:14:35:585 [Appium]   capabilities for this Android session
+2022-12-19 13:14:35:585 [Appium] 
+2022-12-19 13:14:35:585 [Appium]   Setting 'automationName=UiAutomator2' by default and using the 
+2022-12-19 13:14:35:585 [Appium]   UiAutomator2 Driver
+2022-12-19 13:14:35:585 [Appium] 
+2022-12-19 13:14:35:585 [Appium]   The next major version of Appium (2.x) will **require** the 
+2022-12-19 13:14:35:585 [Appium]   'automationName' capability to be set for all sessions on all 
+2022-12-19 13:14:35:585 [Appium]   platforms
+2022-12-19 13:14:35:585 [Appium] 
+2022-12-19 13:14:35:585 [Appium]   In previous versions (Appium <= 1.13.x), the default was 
+2022-12-19 13:14:35:585 [Appium]   'automationName=UiAutomator1'
+2022-12-19 13:14:35:585 [Appium] 
+2022-12-19 13:14:35:585 [Appium]   If you wish to use that automation instead of UiAutomator2, please 
+2022-12-19 13:14:35:586 [Appium]   add 'automationName=UiAutomator1' to your desired capabilities
+2022-12-19 13:14:35:586 [Appium] 
+2022-12-19 13:14:35:586 [Appium]   For more information about drivers, please visit 
+2022-12-19 13:14:35:586 [Appium]   http://appium.io/docs/en/about-appium/intro/ and explore the 
+2022-12-19 13:14:35:586 [Appium]   'Drivers' menu
+2022-12-19 13:14:35:586 [Appium] 
+2022-12-19 13:14:35:586 [Appium] ======================================================================
+2022-12-19 13:14:35:586 [Appium] 
+2022-12-19 13:14:35:897 [Appium] Appium v1.22.3 creating new AndroidUiautomator2Driver (v1.70.1) session
+2022-12-19 13:14:35:899 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
+2022-12-19 13:14:35:900 [BaseDriver] Creating session with W3C capabilities: {
+2022-12-19 13:14:35:900 [BaseDriver]   "alwaysMatch": {
+2022-12-19 13:14:35:900 [BaseDriver]     "platformName": "android",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:appActivity": "io.appium.android.apis.ApiDemos",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:appPackage": "io.appium.android.apis",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:autoGrantPermissions": "true",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:deviceName": "Pixel XL",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:noReset": "true",
+2022-12-19 13:14:35:900 [BaseDriver]     "appium:platformVersion": "10"
+2022-12-19 13:14:35:900 [BaseDriver]   },
+2022-12-19 13:14:35:900 [BaseDriver]   "firstMatch": [
+2022-12-19 13:14:35:900 [BaseDriver]     {}
+2022-12-19 13:14:35:900 [BaseDriver]   ]
+2022-12-19 13:14:35:900 [BaseDriver] }
+2022-12-19 13:14:35:904 [BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
+2022-12-19 13:14:35:904 [BaseDriver] Capability 'autoGrantPermissions' changed from string to boolean. This may cause unexpected behavior
+2022-12-19 13:14:35:908 [BaseDriver] Session created with session id: e018d38f-6a4f-41f4-b052-ccbc9efb69c9
+2022-12-19 13:14:35:908 [UiAutomator2] Starting 'io.appium.android.apis' directly on the device
+2022-12-19 13:14:35:910 [UiAutomator2] Deleting UiAutomator2 session
+2022-12-19 13:14:35:911 [BaseDriver] Event 'newSessionStarted' logged at 1671455675911 (18:44:35 GMT+0530 (India Standard Time))
+2022-12-19 13:14:35:980 [W3C] Encountered internal error running command: Error: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details
+2022-12-19 13:14:35:980 [W3C]     at requireSdkRoot (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\helpers.js:36:11)
+2022-12-19 13:14:35:981 [W3C]     at Function.createADB (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\lib\adb.js:57:23)
+2022-12-19 13:14:35:981 [W3C]     at Object.createBaseADB (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-android-driver\lib\android-helpers.js:129:20)
+2022-12-19 13:14:35:981 [W3C]     at Object.getDeviceInfoFromCaps (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-android-driver\lib\android-helpers.js:214:29)
+2022-12-19 13:14:35:981 [W3C]     at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\lib\driver.js:338:40)
+2022-12-19 13:14:35:981 [W3C]     at AndroidUiautomator2Driver.createSession (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\lib\driver.js:229:18)
+2022-12-19 13:14:35:981 [W3C]     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-12-19 13:14:35:981 [W3C]     at AppiumDriver.createSession (C:\Users\ajayverma\AppData\Roaming\npm\node_modules\appium\lib\appium.js:387:35)
+2022-12-19 13:14:35:992 [HTTP] <-- POST /wd/hub/session 500 419 ms - 885
+2022-12-19 13:14:35:992 [HTTP] 
+2022-12-19 13:14:36:029 [HTTP] --> GET /wd/hub/status
+2022-12-19 13:14:36:029 [HTTP] {}
+2022-12-19 13:14:36:029 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2022-12-19 13:14:36:030 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
+2022-12-19 13:14:36:031 [HTTP] <-- GET /wd/hub/status 200 1 ms - 68
+2022-12-19 13:14:36:031 [HTTP] 
