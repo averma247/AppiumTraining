@@ -23,11 +23,7 @@ public class AppiumDemoTest {
 
     AndroidDriver<AndroidElement> driver;
 
-//    @BeforeTest
-//    @Override
-//    public void startServer() throws InterruptedException {
-//        super.startServer();
-//    }
+
 
     @BeforeTest
     public void initAndroidDriver() throws MalformedURLException, InterruptedException {
