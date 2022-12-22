@@ -36,8 +36,8 @@ public class AppiumDemoTest {
         DesiredCapabilities cap = new DesiredCapabilities();
         System.out.println("Setting desired capabilities  -------------------------");
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-        cap.setCapability("deviceName","Pixel XL");
-        cap.setCapability("platformVersion","10");
+        cap.setCapability("deviceName","emulator-5554");
+        cap.setCapability("platformVersion","13");
         cap.setCapability("autoGrantPermissions", "true");
         cap.setCapability("noReset", "true");
         //cap.setCapability("autoDismissAlerts", "true");
@@ -53,6 +53,7 @@ public class AppiumDemoTest {
         wait = new WebDriverWait(driver,10);
 
     }
+
 
     @Test(priority = 0)
     public  void handling_Alert_PopUps() throws InterruptedException {
@@ -157,9 +158,11 @@ public class AppiumDemoTest {
 
 
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
+
+
 
 
 }
